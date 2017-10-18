@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	
+	
+	
+	<link rel="shortcut icon" href="https://www.refersion.com/images/favicons/favicon.ico">
+	
+	<meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.0">
+
+
+    
+	<title>Refersion Developer Docs</title>
+
+    
+      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-a20f419c8e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="grey" data-md-color-accent="green">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Docs" class="md-logo md-header-nav__button">
+            <img src="https://cdn.refersion.com/site/v3/images/logo-asterisk-transparent-24px.png" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Refersion Tracking
+                </span>
+              
+            
+            Refersion Developer Center
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <!--
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+        </div>
+      </div>
+      -->
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        
+          <img src="../../https://cdn.refersion.com/site/v3/images/logo-asterisk-transparent-24px.png">
+        
+      
+    </div>
+    Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Refersion Tracking
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Refersion Tracking
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clicks/" title="Click Tracking" class="md-nav__link">
+      Click Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Conversion Tracking
+      </label>
+    
+    <a href="./" title="Conversion Tracking" class="md-nav__link md-nav__link--active">
+      Conversion Tracking
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-graphql" title="What is GraphQL?" class="md-nav__link">
+    What is GraphQL?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-queries" title="Running Queries" class="md-nav__link">
+    Running Queries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-graphql" title="Why GraphQL?" class="md-nav__link">
+    Why GraphQL?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" title="Additional Resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      GraphQL API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        GraphQL API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graphql-api/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graphql-api/getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-graphql" title="What is GraphQL?" class="md-nav__link">
+    What is GraphQL?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-queries" title="Running Queries" class="md-nav__link">
+    Running Queries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-graphql" title="Why GraphQL?" class="md-nav__link">
+    Why GraphQL?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" title="Additional Resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>The Refersion GraphQL API allows you to query your dataset of affiliate activity through a new unified interface.</p>
+<h2 id="what-is-graphql">What is GraphQL?<a class="headerlink" href="#what-is-graphql" title="Permanent link">&para;</a></h2>
+<p>GraphQL is a new way to think about building and querying APIs. Rather than construct several REST requests to fetch data that you’re interested in, you can often make a single call to fetch the information you need. Additionally you can specify exactly which fields you want included in the response.</p>
+<p>GraphQL is, above all, a querying language, and the format of the query you send matches the data you receive. The language has a schema that strongly types the exchange between client and server.</p>
+<h2 id="running-queries">Running Queries<a class="headerlink" href="#running-queries" title="Permanent link">&para;</a></h2>
+<p>GraphQL is hierarchical. Fields between curly braces – which are also at the next level of indent – are part of the enclosing type. For example, <code>id</code> and <code>email</code> are fields available as part of the <code>affiliate</code> type and <code>commission</code> is a part of <code>offer</code>.</p>
+<h2 id="why-graphql">Why GraphQL?<a class="headerlink" href="#why-graphql" title="Permanent link">&para;</a></h2>
+<p>We’re supporting GraphQL because it offers much more flexibility than a traditional REST interface. GraphQL natively supports performing an introspection query which allows the API to more fully discoverable and easier to integrate against. The ability to define and specify precisely the data you want for your integration is a powerful advantage over the existing REST endpoints. Through fragments and template variables it simplifies many aspects of the client-side integration process. Additionally, because it’s a recognized spec, there are many client libraries and tools to assist you in quickly getting up and running.</p>
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<p>Below is some optional reading material that might help you go deeper into the GraphQL ecosystem:</p>
+<ul>
+<li><a href="http://facebook.github.io/graphql/">GraphQL Specification</a></li>
+<li><a href="http://graphql.org/learn/">Introduction to GraphQL</a></li>
+<li><a href="https://www.howtographql.com/0">The Fullstack Tutorial for GraphQL</a></li>
+<li><a href="https://github.com/chentsulin/awesome-graphql">List of GraphQL Tools</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+<footer class="md-footer">
+
+	<div class="md-footer-meta md-typeset">
+
+		<div class="md-footer-meta__inner md-grid">
+
+			<div class="md-footer-copyright">
+				&copy; Refersion, Inc. All rights reserved.
+			</div>
+
+			
+				<div class="md-footer-social">
+					
+						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+					
+						<a href="https://facebook.com/refersion" class="md-footer-social__link fa fa-facebook"></a>
+					
+						<a href="https://twitter.com/refersion" class="md-footer-social__link fa fa-twitter"></a>
+					
+				</div>
+			
+
+		</div>
+
+	</div>
+
+</footer>
+
+    </div>
+    
+      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
