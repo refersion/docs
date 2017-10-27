@@ -1,0 +1,32 @@
+base_url: 'https://docs.refersion.com'
+site_name: 'Docs'
+site_favicon: 'https://www.refersion.com/images/favicons/favicon.ico'
+theme: 'material'
+theme_dir: 'theme'
+extra:
+  social:
+    - type: 'facebook'
+      link: 'https://facebook.com/refersion'
+    - type: 'twitter'
+      link: 'https://twitter.com/refersion'
+  palette:
+    primary: 'grey'
+    accent: 'green'
+  logo: 'https://cdn.refersion.com/site/v3/images/logo-asterisk-transparent-24px.png'
+pages:
+  - Home: index.md
+  - Refersion Tracking:
+      - Overview: reporting-api/overview.md
+      - Click Tracking: reporting-api/clicks.md
+      - Conversion Tracking: reporting-api/conversions.md
+  - GraphQL API:
+      - Overview: graphql-api/overview.md
+      - Getting Started: graphql-api/getting-started.md
+extra_css:
+  - 'stylesheets/extra.css'
+#repo_url: https://github.com/refersion/docs.git
+remote_branch: master
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc(permalink=true)
