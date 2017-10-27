@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-10-18</lastmod>
+     <lastmod>2017-10-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,19 +13,19 @@
         
     <url>
      <loc>/reporting-api/overview/</loc>
-     <lastmod>2017-10-18</lastmod>
+     <lastmod>2017-10-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/reporting-api/clicks/</loc>
-     <lastmod>2017-10-18</lastmod>
+     <lastmod>2017-10-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/reporting-api/conversions/</loc>
-     <lastmod>2017-10-18</lastmod>
+     <lastmod>2017-10-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -35,13 +35,13 @@
         
     <url>
      <loc>/graphql-api/overview/</loc>
-     <lastmod>2017-10-18</lastmod>
+     <lastmod>2017-10-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/graphql-api/getting-started/</loc>
-     <lastmod>2017-10-18</lastmod>
+     <lastmod>2017-10-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
