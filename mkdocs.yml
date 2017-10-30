@@ -15,10 +15,10 @@ extra:
   logo: 'https://cdn.refersion.com/site/v3/images/logo-asterisk-transparent-24px.png'
 pages:
   - Home: index.md
-  - Refersion Tracking:
-      - Overview: reporting-api/overview.md
-      - Click Tracking: reporting-api/clicks.md
-      - Conversion Tracking: reporting-api/conversions.md
+#  - Refersion Tracking:
+#      - Overview: reporting-api/overview.md
+#      - Click Tracking: reporting-api/clicks.md
+#      - Conversion Tracking: reporting-api/conversions.md
   - GraphQL API:
       - Overview: graphql-api/overview.md
       - Getting Started: graphql-api/getting-started.md
