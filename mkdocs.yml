@@ -19,9 +19,8 @@ pages:
 #      - Overview: reporting-api/overview.md
 #      - Click Tracking: reporting-api/clicks.md
 #      - Conversion Tracking: reporting-api/conversions.md
-  - GraphQL API:
-      - Overview: graphql-api/overview.md
-      - Getting Started: graphql-api/getting-started.md
+  - Refersion REST API: rest-api/index.md
+  - GraphQL API: graphql-api/index.md
 extra_css:
   - 'stylesheets/extra.css'
 #repo_url: https://github.com/refersion/docs.git
