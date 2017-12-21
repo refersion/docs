@@ -1,8 +1,8 @@
-# Overview
+# GraphQL Overview
 
 ## Introduction
 
-The Refersion GraphQL API allows you to query your dataset of affiliate activity through a new unified interface.
+The Refersion GraphQL API allows you to query your dataset of affiliate activity through a unified interface. You don't have to depend on Refersion creating the insight from the data, you can mine the dataset for exactly what you need.
 
 ## What is GraphQL?
 
