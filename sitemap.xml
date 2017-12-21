@@ -4,25 +4,35 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-12-19</lastmod>
+     <lastmod>2017-12-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
     <url>
-     <loc>/rest-api/</loc>
-     <lastmod>2017-12-19</lastmod>
+     <loc>/graphql-api/overview/</loc>
+     <lastmod>2017-12-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/graphql-api/getting-started/</loc>
+     <lastmod>2017-12-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
+        
     <url>
-     <loc>/graphql-api/</loc>
-     <lastmod>2017-12-19</lastmod>
+     <loc>/rest-api/overview/</loc>
+     <lastmod>2017-12-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
 </urlset>
