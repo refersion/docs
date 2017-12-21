@@ -8,6 +8,12 @@ The Refersion GraphQL API allows you to query your dataset of affiliate activity
 
 GraphQL is a new way to think about building and querying APIs. Rather than construct several REST requests to fetch data that you’re interested in, you can often make a single call to fetch the information you need. Additionally you can specify exactly which fields you want included in the response.
 
+Example request and response:
+
+<div style="text-align: center;">
+<img src="/assets/images/graphql-response-animation.gif" alt="What you request is what you get" />
+</div>
+
 GraphQL is, above all, a querying language, and the format of the query you send matches the data you receive. The language has a schema that strongly types the exchange between client and server.
 
 ## Running Queries
