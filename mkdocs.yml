@@ -29,5 +29,6 @@ pages:
   - GraphQL API: 
       - Overview: graphql-api/overview.md
       - Getting Started: graphql-api/getting-started.md
+      - Tutorial: graphql-api/tutorial.md
   - Refersion REST API (Legacy): 
       - Overview: rest-api/overview.md

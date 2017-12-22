@@ -289,11 +289,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Refersion REST API
+      Refersion REST API (Legacy)
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        Refersion REST API
+        Refersion REST API (Legacy)
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -387,9 +387,18 @@
                 
                 <h1 id="graphql-overview">GraphQL Overview<a class="headerlink" href="#graphql-overview" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>The Refersion GraphQL API allows you to query your dataset of affiliate activity through a new unified interface.</p>
+<p>The Refersion GraphQL API allows you to query your dataset of affiliate activity through a unified interface. You don't have to depend on Refersion creating the insight from the data, you can mine the dataset for exactly what you need.</p>
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gdoRAPW7Abc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+</div>
+
 <h2 id="what-is-graphql">What is GraphQL?<a class="headerlink" href="#what-is-graphql" title="Permanent link">&para;</a></h2>
 <p>GraphQL is a new way to think about building and querying APIs. Rather than construct several REST requests to fetch data that you’re interested in, you can often make a single call to fetch the information you need. Additionally you can specify exactly which fields you want included in the response.</p>
+<p>Example request and response:</p>
+<div style="text-align: center;">
+<img src="/assets/images/graphql-response-animation.gif" alt="What you request is what you get" />
+</div>
+
 <p>GraphQL is, above all, a querying language, and the format of the query you send matches the data you receive. The language has a schema that strongly types the exchange between client and server.</p>
 <h2 id="running-queries">Running Queries<a class="headerlink" href="#running-queries" title="Permanent link">&para;</a></h2>
 <p>GraphQL is hierarchical. Fields between curly braces – which are also at the next level of indent – are part of the enclosing type. For example, <code>id</code> and <code>email</code> are fields available as part of the <code>affiliate</code> type and <code>commission</code> is a part of <code>offer</code>.</p>
@@ -428,5 +437,7 @@
     
       
     
+
+    <script src="https://use.fontawesome.com/281db0209a.js"></script>
   </body>
 </html>
