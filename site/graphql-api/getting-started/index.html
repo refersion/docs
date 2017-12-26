@@ -401,17 +401,20 @@
 <p>In order to make API requests, you will need an active Refersion account.  You can start your free trial account <a href="https://www.refersion.com/signup">here</a> or you can email <a href="mailto:helmpe@refersion.com">helpme@refersion.com</a> for more details. </p>
 <h2 id="base-url">Base URL<a class="headerlink" href="#base-url" title="Permanent link">&para;</a></h2>
 <p>All URLS referenced in the documentation have the following base:</p>
+<p><b></p>
 <div class="codehilite"><pre><span></span>https://graphql.refersion.com
 </pre></div>
 
 
+<p></b></p>
 <h2 id="sslhttps">SSL/HTTPS<a class="headerlink" href="#sslhttps" title="Permanent link">&para;</a></h2>
 <p>The Refersion GraphQL API is serveed over HTTPS.  To ensure data privacy, unencrypted HTTP is not supported.</p>
 <h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
 <p>In order to make calls to our API you need to include your API key along with the request.  You may obtain your API key from your <a href="https://www.refersion.com/settings">API Settings</a> page while logged in.  <em>Note, if you are not logged in following this link will lead to a 404 error page.</em></p>
-<p>We look for your API Key in the Authentication header.</p>
+<p>We look for your API Key in the <code>X-Refersion-Key</code> header.</p>
 <div class="codehilite"><pre><span></span>$ curl <span class="s2">&quot;https://graphql.refersion.com&quot;</span>
-  -H <span class="s2">&quot;Authorization: Bearer [YOUR KEY]&quot;</span>
+  -H <span class="s2">&quot;X-Refersion-Key: [YOUR KEY]&quot;</span>
+  -H <span class="s1">&#39;Content-Type: application/graphql&#39;</span>
 </pre></div>
 
 
@@ -420,32 +423,10 @@
 <p>It is very important to store your API key in a private and secure location. Sharing your API key is strictly prohibited.</p>
 </div>
 <h2 id="quota-usage">Quota &amp; Usage<a class="headerlink" href="#quota-usage" title="Permanent link">&para;</a></h2>
-<p>Each request will return your current usage in the response headers.  </p>
-<table>
-<thead>
-<tr>
-<th>Header</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>X-Quota Limit</td>
-<td>Your Current Request Limit</td>
-</tr>
-<tr>
-<td>X-Quota Remaining</td>
-<td>Number of Remaining requests in the current period</td>
-</tr>
-<tr>
-<td>X-Quota-Reset</td>
-<td>The unix timestamp (seconds, UTC) of the start of the next quota period</td>
-</tr>
-</tbody>
-</table>
+<p>In order to keep our service running a high level of performance, every account has a limit of requests. If you exceed your allotted limits, a <code>429 Too Many Requests</code> error code will be returned and future requests may be throttled.</p>
 <h2 id="example-query">Example Query<a class="headerlink" href="#example-query" title="Permanent link">&para;</a></h2>
 <p>The query below also demonstrates how to used <strong>GraphQL</strong> fragments on <em>affiliate</em> to query for information specific to sub-type.  In this case, we request a list of affiliates along with the respective offer that they are assigned to.  </p>
-<div class="codehilite"><pre><span></span><span class="nt">base</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">affiliates</span><span class="o">(</span><span class="nt">limit</span><span class="nd">:2</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">id</span>
     <span class="nt">email</span>
@@ -458,11 +439,6 @@
 </pre></div>
 
 
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p><strong>Query type must be "base".</strong> 
-Please make sure to start every query with the "base" query tupe as seen above. Currently this is the only supported query type.</p>
-</div>
 <p>This response returns:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
        <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
