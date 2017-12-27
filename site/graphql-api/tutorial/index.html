@@ -90,7 +90,7 @@
                 Developer Center
               </span>
               <span class="md-header-nav__topic">
-                Getting Started
+                Tutorial
               </span>
             
           
@@ -202,6 +202,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -213,11 +225,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Getting Started
+        Tutorial
       </label>
     
-    <a href="./" title="Getting Started" class="md-nav__link md-nav__link--active">
-      Getting Started
+    <a href="./" title="Tutorial" class="md-nav__link md-nav__link--active">
+      Tutorial
     </a>
     
       
@@ -231,36 +243,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#base-url" title="Base URL" class="md-nav__link">
-    Base URL
+  <a href="#scenario" title="Scenario" class="md-nav__link">
+    Scenario
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sslhttps" title="SSL/HTTPS" class="md-nav__link">
-    SSL/HTTPS
+  <a href="#initial-steps" title="Initial Steps" class="md-nav__link">
+    Initial Steps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#want-to-skip-ahead" title="Want to skip ahead?" class="md-nav__link">
+    Want to skip ahead?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-endpoint-and-headers" title="Setup Endpoint and Headers" class="md-nav__link">
+    Setup Endpoint and Headers
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#authentication" title="Authentication" class="md-nav__link">
-    Authentication
+  <a href="#building-a-graphql-query" title="Building a GraphQL Query" class="md-nav__link">
+    Building a GraphQL Query
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#quota-usage" title="Quota &amp; Usage" class="md-nav__link">
-    Quota &amp; Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-query" title="Example Query" class="md-nav__link">
-    Example Query
+  <a href="#expected-result" title="Expected Result" class="md-nav__link">
+    Expected Result
   </a>
   
 </li>
@@ -271,18 +296,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../tutorial/" title="Tutorial" class="md-nav__link">
-      Tutorial
-    </a>
   </li>
 
         
@@ -348,36 +361,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#base-url" title="Base URL" class="md-nav__link">
-    Base URL
+  <a href="#scenario" title="Scenario" class="md-nav__link">
+    Scenario
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sslhttps" title="SSL/HTTPS" class="md-nav__link">
-    SSL/HTTPS
+  <a href="#initial-steps" title="Initial Steps" class="md-nav__link">
+    Initial Steps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#want-to-skip-ahead" title="Want to skip ahead?" class="md-nav__link">
+    Want to skip ahead?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-endpoint-and-headers" title="Setup Endpoint and Headers" class="md-nav__link">
+    Setup Endpoint and Headers
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#authentication" title="Authentication" class="md-nav__link">
-    Authentication
+  <a href="#building-a-graphql-query" title="Building a GraphQL Query" class="md-nav__link">
+    Building a GraphQL Query
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#quota-usage" title="Quota &amp; Usage" class="md-nav__link">
-    Quota &amp; Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-query" title="Example Query" class="md-nav__link">
-    Example Query
+  <a href="#expected-result" title="Expected Result" class="md-nav__link">
+    Expected Result
   </a>
   
 </li>
@@ -397,38 +423,56 @@
               
                 
                 
-                <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<p>In order to make API requests, you will need an active Refersion account.  You can start your free trial account <a href="https://www.refersion.com/signup">here</a> or you can email <a href="mailto:helmpe@refersion.com">helpme@refersion.com</a> for more details. </p>
-<h2 id="base-url">Base URL<a class="headerlink" href="#base-url" title="Permanent link">&para;</a></h2>
-<p>All URLS referenced in the documentation have the following base:</p>
-<p><b></p>
-<div class="codehilite"><pre><span></span>https://graphql.refersion.com
-</pre></div>
+                <h1 id="graphql-tutorial">GraphQL Tutorial<a class="headerlink" href="#graphql-tutorial" title="Permanent link">&para;</a></h1>
+<h2 id="scenario">Scenario<a class="headerlink" href="#scenario" title="Permanent link">&para;</a></h2>
+<p>Imagine that you wanted to email all of your affiliates outside of Refersion. To do so, you must pull all of the names (first and last), email addresses, and current commission rate of your affiliates so that they may be automatically entered into your email system.</p>
+<p>In this tutorial we will setup our GraphQL API call in order to pull the data we need to satisfy the above use case. </p>
+<h2 id="initial-steps">Initial Steps<a class="headerlink" href="#initial-steps" title="Permanent link">&para;</a></h2>
+<p>To get started, you'll need access to the following:</p>
+<ol>
+<li>Your Refersion account GraphQL API key. Grab it from your account settings <a href="">here</a>.</li>
+<li>A GUI like <a href="https://www.getpostman.com/">Postman</a> (free) so that you may communicate the API and the response.</li>
+</ol>
+<h4 id="want-to-skip-ahead">Want to skip ahead?<a class="headerlink" href="#want-to-skip-ahead" title="Permanent link">&para;</a></h4>
+<p>If you would like to skip the manual process defined below, click the button below to automatically setup Postman. Do not forget to replace the respective header with your actual account API key.</p>
+<div class="postman-run-button"
+data-postman-action="collection/import"
+data-postman-var-1="3c84e7615fcbf046b007"></div>
 
+<script type="text/javascript">
+  (function (p,o,s,t,m,a,n) {
+    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+      (n = o.createElement("script")),
+      (n.id = s+t), (n.async = 1), (n.src = m), n
+    ));
+  }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+</script>
 
-<p></b></p>
-<h2 id="sslhttps">SSL/HTTPS<a class="headerlink" href="#sslhttps" title="Permanent link">&para;</a></h2>
-<p>The Refersion GraphQL API is serveed over HTTPS.  To ensure data privacy, unencrypted HTTP is not supported.</p>
-<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
-<p>In order to make calls to our API you need to include your API key along with the request.  You may obtain your API key from your <a href="https://www.refersion.com/settings">API Settings</a> page while logged in.  <em>Note, if you are not logged in following this link will lead to a 404 error page.</em></p>
-<p>We look for your API Key in the <code>X-Refersion-Key</code> header.</p>
-<div class="codehilite"><pre><span></span>$ curl <span class="s2">&quot;https://graphql.refersion.com&quot;</span>
-  -H <span class="s2">&quot;X-Refersion-Key: [YOUR KEY]&quot;</span>
-  -H <span class="s1">&#39;Content-Type: application/graphql&#39;</span>
-</pre></div>
-
-
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>It is very important to store your API key in a private and secure location. Sharing your API key is strictly prohibited.</p>
+<h2 id="setup-endpoint-and-headers">Setup Endpoint and Headers<a class="headerlink" href="#setup-endpoint-and-headers" title="Permanent link">&para;</a></h2>
+<p>With GraphQL the URL that you post remains consistant with every call. Use this one for Refersion:</p>
+<p><strong><code>https://graphql.refersion.com</code></strong></p>
+<p>Every request into the API also requires the following headers:</p>
+<ul>
+<li><strong><code>X-Refersion-Key: API-KEY</code></strong> <br>This your API key (replace with "API-KEY").</li>
+<li><strong><code>Content-Type: application/graphql</code></strong> <br>This is a static header that tells our system that you're sending a valid JSON string.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>A <code>Content-Type: application/json</code> header is also supported as an alternative for more advanced users who want more customization. Additional information how this header value interacts with our API is available <a href="http://graphql.org/learn/serving-over-http/#post-request">here</a>.</p>
 </div>
-<h2 id="quota-usage">Quota &amp; Usage<a class="headerlink" href="#quota-usage" title="Permanent link">&para;</a></h2>
-<p>In order to keep our service running a high level of performance, every account has a limit of requests. If you exceed your allotted limits, a <code>429 Too Many Requests</code> error code will be returned and future requests may be throttled.</p>
-<h2 id="example-query">Example Query<a class="headerlink" href="#example-query" title="Permanent link">&para;</a></h2>
-<p>The query below also demonstrates how to used <strong>GraphQL</strong> fragments on <em>affiliate</em> to query for information specific to sub-type.  In this case, we request a list of affiliates along with the respective offer that they are assigned to.  </p>
+<p><em>Screenshot from Postman:</em></p>
+<div style="text-align: center;">
+<img src="/assets/images/postman-headers.png" alt="Postman headers screenshot" />
+</div>
+
+<h2 id="building-a-graphql-query">Building a GraphQL Query<a class="headerlink" href="#building-a-graphql-query" title="Permanent link">&para;</a></h2>
+<p>On every request to GraphQL you must define the format of the JSON response that you expect. This is done in the body of the request. For our purposes, we want a JSON array to be returned containing basic information about each affiliate as well as their commission structure in a nested array. To accomplish this, we send the following as the body of our request: </p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-  <span class="nt">affiliates</span><span class="o">(</span><span class="nt">limit</span><span class="nd">:2</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nt">affiliates</span><span class="o">(</span><span class="nt">limit</span><span class="nd">:</span> <span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">id</span>
+    <span class="nt">first_name</span>
+    <span class="nt">last_name</span>
     <span class="nt">email</span>
     <span class="nt">offer</span> <span class="p">{</span>
       <span class="nt">commission</span>
@@ -439,29 +483,38 @@
 </pre></div>
 
 
-<p>This response returns:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Names in GraphQL are case‐sensitive. That is to say name, Name, and NAME all refer to different names. Underscores are significant, which means other_name and othername are two different names.</p>
+</div>
+<h2 id="expected-result">Expected Result<a class="headerlink" href="#expected-result" title="Permanent link">&para;</a></h2>
+<p>Assuming that you were able get a successful response (code 200), it should look something like this:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-       <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
-           <span class="nt">&quot;affiliates&quot;</span><span class="p">:</span> <span class="p">[</span>
-               <span class="p">{</span>
-                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">444</span><span class="p">,</span>
-                    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;jane.verde@aol.com&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;offer&quot;</span><span class="p">:</span> <span class="p">{</span>
-                         <span class="nt">&quot;commission&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-                         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FLAT_RATE&quot;</span>
-                    <span class="p">}</span>
-               <span class="p">},</span>
-               <span class="p">{</span>
-                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">419</span><span class="p">,</span>
-                    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;mike.rogers@hotmail.com&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;offer&quot;</span><span class="p">:</span> <span class="p">{</span>
-                         <span class="nt">&quot;commission&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-                         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FLAT_RATE&quot;</span>
-                    <span class="p">}</span>
-               <span class="p">}</span>
-          <span class="p">]</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;affiliates&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">444</span><span class="p">,</span>
+        <span class="nt">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;last_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Verde&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;jane.verde@aol.com&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;offer&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;commission&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FLAT_RATE&quot;</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">419</span><span class="p">,</span>
+        <span class="nt">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mike&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;last_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Rogers&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;mike.rogers@hotmail.com&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;offer&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;commission&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FLAT_RATE&quot;</span>
+        <span class="p">}</span>
       <span class="p">}</span>
- <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
                 
                   
