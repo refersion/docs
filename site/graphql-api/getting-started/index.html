@@ -90,7 +90,7 @@
                 Developer Center
               </span>
               <span class="md-header-nav__topic">
-                Overview
+                Getting Started
               </span>
             
           
@@ -190,6 +190,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -201,11 +213,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Overview
+        Getting Started
       </label>
     
-    <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
-      Overview
+    <a href="./" title="Getting Started" class="md-nav__link md-nav__link--active">
+      Getting Started
     </a>
     
       
@@ -219,36 +231,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
-    Introduction
+  <a href="#base-url" title="Base URL" class="md-nav__link">
+    Base URL
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-graphql" title="What is GraphQL?" class="md-nav__link">
-    What is GraphQL?
+  <a href="#sslhttps" title="SSL/HTTPS" class="md-nav__link">
+    SSL/HTTPS
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-queries" title="Running Queries" class="md-nav__link">
-    Running Queries
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-graphql" title="Why GraphQL?" class="md-nav__link">
-    Why GraphQL?
+  <a href="#quota-usage" title="Quota &amp; Usage" class="md-nav__link">
+    Quota &amp; Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-resources" title="Additional Resources" class="md-nav__link">
-    Additional Resources
+  <a href="#example-query" title="Example Query" class="md-nav__link">
+    Example Query
   </a>
   
 </li>
@@ -268,8 +280,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../getting-started/" title="Getting Started" class="md-nav__link">
-      Getting Started
+    <a href="../tutorial/" title="Tutorial" class="md-nav__link">
+      Tutorial
     </a>
   </li>
 
@@ -336,36 +348,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
-    Introduction
+  <a href="#base-url" title="Base URL" class="md-nav__link">
+    Base URL
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-graphql" title="What is GraphQL?" class="md-nav__link">
-    What is GraphQL?
+  <a href="#sslhttps" title="SSL/HTTPS" class="md-nav__link">
+    SSL/HTTPS
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-queries" title="Running Queries" class="md-nav__link">
-    Running Queries
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-graphql" title="Why GraphQL?" class="md-nav__link">
-    Why GraphQL?
+  <a href="#quota-usage" title="Quota &amp; Usage" class="md-nav__link">
+    Quota &amp; Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-resources" title="Additional Resources" class="md-nav__link">
-    Additional Resources
+  <a href="#example-query" title="Example Query" class="md-nav__link">
+    Example Query
   </a>
   
 </li>
@@ -385,29 +397,72 @@
               
                 
                 
-                <h1 id="graphql-overview">GraphQL Overview<a class="headerlink" href="#graphql-overview" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>The Refersion GraphQL API allows you to query your dataset of affiliate activity through a unified interface. You don't have to depend on Refersion creating the insight from the data, you can mine the dataset for exactly what you need.</p>
-<h2 id="what-is-graphql">What is GraphQL?<a class="headerlink" href="#what-is-graphql" title="Permanent link">&para;</a></h2>
-<p>GraphQL is a new way to think about building and querying APIs. Rather than construct several REST requests to fetch data that you’re interested in, you can often make a single call to fetch the information you need. Additionally you can specify exactly which fields you want included in the response.</p>
-<p>Example request and response:</p>
-<div style="text-align: center;">
-<img src="/assets/images/graphql-response-animation.gif" alt="What you request is what you get" />
-</div>
+                <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<p>In order to make API requests, you will need an active Refersion account.  You can start your free trial account <a href="https://www.refersion.com/signup">here</a> or you can email <a href="mailto:helmpe@refersion.com">helpme@refersion.com</a> for more details. </p>
+<h2 id="base-url">Base URL<a class="headerlink" href="#base-url" title="Permanent link">&para;</a></h2>
+<p>All URLS referenced in the documentation have the following base:</p>
+<p><b></p>
+<div class="codehilite"><pre><span></span>https://graphql.refersion.com
+</pre></div>
 
-<p>GraphQL is, above all, a querying language, and the format of the query you send matches the data you receive. The language has a schema that strongly types the exchange between client and server.</p>
-<h2 id="running-queries">Running Queries<a class="headerlink" href="#running-queries" title="Permanent link">&para;</a></h2>
-<p>GraphQL is hierarchical. Fields between curly braces – which are also at the next level of indent – are part of the enclosing type. For example, <code>id</code> and <code>email</code> are fields available as part of the <code>affiliate</code> type and <code>commission</code> is a part of <code>offer</code>.</p>
-<h2 id="why-graphql">Why GraphQL?<a class="headerlink" href="#why-graphql" title="Permanent link">&para;</a></h2>
-<p>We’re supporting GraphQL because it offers much more flexibility than a traditional REST interface. GraphQL natively supports performing an introspection query which allows the API to more fully discoverable and easier to integrate against. The ability to define and specify precisely the data you want for your integration is a powerful advantage over the existing REST endpoints. Through fragments and template variables it simplifies many aspects of the client-side integration process. Additionally, because it’s a recognized spec, there are many client libraries and tools to assist you in quickly getting up and running.</p>
-<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
-<p>Below is some optional reading material that might help you go deeper into the GraphQL ecosystem:</p>
-<ul>
-<li><a href="http://facebook.github.io/graphql/">GraphQL Specification</a></li>
-<li><a href="http://graphql.org/learn/">Introduction to GraphQL</a></li>
-<li><a href="https://www.howtographql.com/0">The Fullstack Tutorial for GraphQL</a></li>
-<li><a href="https://github.com/chentsulin/awesome-graphql">List of GraphQL Tools</a></li>
-</ul>
+
+<p></b></p>
+<h2 id="sslhttps">SSL/HTTPS<a class="headerlink" href="#sslhttps" title="Permanent link">&para;</a></h2>
+<p>The Refersion GraphQL API is serveed over HTTPS.  To ensure data privacy, unencrypted HTTP is not supported.</p>
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<p>In order to make calls to our API you need to include your API key along with the request.  You may obtain your API key from your <a href="https://www.refersion.com/settings">API Settings</a> page while logged in.  <em>Note, if you are not logged in following this link will lead to a 404 error page.</em></p>
+<p>We look for your API Key in the <code>X-Refersion-Key</code> header.</p>
+<div class="codehilite"><pre><span></span>$ curl <span class="s2">&quot;https://graphql.refersion.com&quot;</span>
+  -H <span class="s2">&quot;X-Refersion-Key: [YOUR KEY]&quot;</span>
+  -H <span class="s1">&#39;Content-Type: application/graphql&#39;</span>
+</pre></div>
+
+
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>It is very important to store your API key in a private and secure location. Sharing your API key is strictly prohibited.</p>
+</div>
+<h2 id="quota-usage">Quota &amp; Usage<a class="headerlink" href="#quota-usage" title="Permanent link">&para;</a></h2>
+<p>In order to keep our service running a high level of performance, every account has a limit of requests. If you exceed your allotted limits, a <code>429 Too Many Requests</code> error code will be returned and future requests may be throttled.</p>
+<h2 id="example-query">Example Query<a class="headerlink" href="#example-query" title="Permanent link">&para;</a></h2>
+<p>The query below also demonstrates how to used <strong>GraphQL</strong> fragments on <em>affiliate</em> to query for information specific to sub-type.  In this case, we request a list of affiliates along with the respective offer that they are assigned to.  </p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">affiliates</span><span class="o">(</span><span class="nt">limit</span><span class="nd">:2</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">id</span>
+    <span class="nt">email</span>
+    <span class="nt">offer</span> <span class="p">{</span>
+      <span class="nt">commission</span>
+      <span class="nt">type</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>This response returns:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+       <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;affiliates&quot;</span><span class="p">:</span> <span class="p">[</span>
+               <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">444</span><span class="p">,</span>
+                    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;jane.verde@aol.com&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;offer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                         <span class="nt">&quot;commission&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FLAT_RATE&quot;</span>
+                    <span class="p">}</span>
+               <span class="p">},</span>
+               <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">419</span><span class="p">,</span>
+                    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;mike.rogers@hotmail.com&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;offer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                         <span class="nt">&quot;commission&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FLAT_RATE&quot;</span>
+                    <span class="p">}</span>
+               <span class="p">}</span>
+          <span class="p">]</span>
+      <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
                 
                   
                 

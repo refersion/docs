@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block footer %}
+© Refersion, Inc. All rights reserved.
+{% if config.extra.social %}
+{% set path = "ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %} {% for social in config.extra.social %} {% endfor %}
+{% endif %}
+{% endblock %} {% block htmltitle %} {% endblock %}
