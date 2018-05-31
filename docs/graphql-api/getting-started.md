@@ -44,12 +44,12 @@ curl -X POST \
 Sample query: 
 ```json
 {
-	"query": "{  
-	 	offers { 
-	 	 	offer_name, 
-	 	 	commission, 
-	 	 	type 
-	 	} 
-	}"
+    "query": "{  
+        offers { 
+            offer_name, 
+            commission, 
+            type 
+        } 
+    }"
 }
 ```

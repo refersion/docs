@@ -6,18 +6,18 @@
 Sample query:
 ```json
 {
-  "query": "{ 
-      conversions (created_from: 1525132800 created_to: 1527202238) { 
-          affiliate {
-              name, 
-              email
-          }, 
-          total, 
-          commission_total, 
-          currency, 
-          created
-      }
-  }"
+    "query": "{ 
+        conversions (created_from: 1525132800 created_to: 1527202238) { 
+            affiliate {
+                name, 
+                email
+            }, 
+            total, 
+            commission_total, 
+            currency, 
+            created
+        }
+    }"
 }
 ```
 _Note_: timestamp is in Unix time
@@ -61,14 +61,14 @@ Sample response:
 Sample query: 
 ```json
 {
-  "query": "{ 
-      affiliates {
-          status, 
-          name, 
-          email, 
-          rfsn_parameter
-      }
-  }"
+    "query": "{ 
+        affiliates {
+            status, 
+            name, 
+            email, 
+            rfsn_parameter
+        }
+    }"
 }
 ```
 
