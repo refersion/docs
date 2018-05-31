@@ -2,12 +2,6 @@ site_name: 'Developer Center'
 theme:
     name: 'material'
     custom_dir: custom
-    extra:
-      social:
-        - type: 'facebook'
-          link: 'https://facebook.com/refersion'
-        - type: 'twitter'
-          link: 'https://twitter.com/refersion'
     palette:
       primary: 'grey'
       accent: 'green'
@@ -17,6 +11,12 @@ theme:
     logo: 'https://cdn.refersion.com/site/v3/images/logo-asterisk-transparent-24px.png'
 extra_css:
   - 'assets/stylesheets/extra.css'
+extra:
+  social:
+    - type: 'facebook'
+      link: 'https://facebook.com/refersion'
+    - type: 'twitter'
+      link: 'https://twitter.com/refersion'
 remote_branch: master
 markdown_extensions:
   - markdown.extensions.admonition
@@ -29,6 +29,12 @@ pages:
   - GraphQL API: 
       - Overview: graphql-api/overview.md
       - Getting Started: graphql-api/getting-started.md
-      - Tutorial: graphql-api/tutorial.md
-  - Refersion REST API (Legacy): 
+      - Explore Refersion GraphQL using Voyager: graphql-api/explore-refersion-graphql-using-voyager.md
+      - Call Limits: graphql-api/call-limits.md
+      - Pagination: graphql-api/pagination.md
+      - Example Queries:
+        - GraphQL for Merchants: graphql-api/example-queries/graphql-for-merchants.md
+        - GraphQL for Marketplace Users: graphql-api/example-queries/graphql-for-marketplace-users.md
+
+  - Refersion REST API:
       - Overview: rest-api/overview.md

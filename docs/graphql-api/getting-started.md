@@ -1,81 +1,53 @@
 # Getting Started
 
-In order to make API requests, you will need an active Refersion account.  You can start your free trial account [here](https://www.refersion.com/signup) or you can email [helpme@refersion.com](mailto:helmpe@refersion.com) for more details. 
+!!! Important
+    This is a Beta API and is subject to change.
 
-## Base URL
+## Endpoint
 
-All URLS referenced in the documentation have the following base:
+Unlike Refersion’s REST API which has a variety of endpoints, the GraphQL API has a single endpoint:
 
 <b>
 ```bash
-https://graphql.refersion.com
+POST https://graphql.refersion.com
 ```
 </b>
 
-## SSL/HTTPS
-
-The Refersion GraphQL API is serveed over HTTPS.  To ensure data privacy, unencrypted HTTP is not supported.
-
 ## Authentication
+The GraphQL API requires an access token for making authenticated requests.
 
-In order to make calls to our API you need to include your API key along with the request.  You may obtain your API key from your [API Settings](https://www.refersion.com/settings) page while logged in.  *Note, if you are not logged in following this link will lead to a 404 error page.*
 
-We look for your API Key in the `X-Refersion-Key` header.
+
+##### Getting your access token 
+
+Refersion merchants can obtain access token by logging into your Refersion account and navigating to [Account/Settings/Refersion API/GraphQL](https://www.refersion.com/base/settings/integrations/api). 
+
+If you are a [Refersion Marketplace](https://marketplace.refersion.com/) user and would like to use GraphQL, please email us at [helpme@refersion.com](mailto:helpme@refersion.com) to request access. Once GraphQL has been enabled on your account, the token will be available on your [Marketplace Profile](https://marketplace.refersion.com/profile) page.
+
+## Making your first query
+You can access the GraphQL API endpoint using cURL or any other HTTP client. For the following test example, make sure to replace `<ACCESS_TOKEN>` with the token you obtained from the Authentication section.  
+
+
+#### curl
+To make a query using curl, send a POST request with your query as the JSON payload.
 
 ```bash
-$ curl "https://graphql.refersion.com"
-  -H "X-Refersion-Key: [YOUR KEY]"
-  -H 'Content-Type: application/graphql'
+curl -X POST \
+"https://graphql.refersion.com" \
+-H "X-Refersion-Key: <OUR_ACCESS_TOKEN>" \
+-H "Content-Type: application/json" \
 ```
 
-!!! Important
-    It is very important to store your API key in a private and secure location. Sharing your API key is strictly prohibited.
 
-## Quota & Usage
-
-In order to keep our service running a high level of performance, every account has a limit of requests. If you exceed your allotted limits, a `429 Too Many Requests` error code will be returned and future requests may be throttled.
-
-## Example Query
-
-The query below also demonstrates how to used **GraphQL** fragments on *affiliate* to query for information specific to sub-type.  In this case, we request a list of affiliates along with the respective offer that they are assigned to.  
-
-```scss
-{
-  affiliates(limit:2) {
-    id
-    email
-    offer {
-      commission
-      type
-    }
-  }
-}
-```
-
-This response returns:
-
+#### Example Query
 ```json
 {
-       "data": {
-           "affiliates": [
-               {
-                    "id": 444,
-                    "email": "jane.verde@aol.com",
-                    "offer": {
-                         "commission": 10,
-                         "type": "FLAT_RATE"
-                    }
-               },
-               {
-                    "id": 419,
-                    "email": "mike.rogers@hotmail.com",
-                    "offer": {
-                         "commission": 10,
-                         "type": "FLAT_RATE"
-                    }
-               }
-          ]
-      }
- }
+	"query": "{  
+	 	offers { 
+	 	 	offer_name, 
+	 	 	commission, 
+	 	 	type 
+	 	} 
+	}"
+}
 ```
- 
