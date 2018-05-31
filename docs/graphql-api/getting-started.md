@@ -40,6 +40,8 @@ curl -X POST \
 
 
 #### Example Query
+
+Sample Query: 
 ```json
 {
 	"query": "{  

@@ -1,9 +1,5 @@
 # GraphQL Overview
 
-!!! Important
-    This is a Beta API and is subject to change.
-
-
 ## What is GraphQL?
 
 GraphQL is a new way to think about building and querying APIs. Rather than construct several REST requests to pull data that you’re interested in, you can fetch all the information you need in a single call. GraphQL allows you specify exactly which fields you need, making data querying more flexible and efficient than traditional REST APIs. 

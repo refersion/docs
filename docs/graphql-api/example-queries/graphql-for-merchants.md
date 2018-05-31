@@ -3,7 +3,7 @@
 
 #### Get a list of your conversions from May 2018
 
-Request:
+Sample Query:
 ```json
 {
   "query": "{ 
@@ -58,7 +58,7 @@ Sample response:
 
 #### Get a list of affiliates and their referral parameters
 
-Query: 
+Sample Query: 
 ```json
 {
   "query": "{ 

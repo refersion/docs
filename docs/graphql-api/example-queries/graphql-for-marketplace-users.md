@@ -1,6 +1,8 @@
 # GraphQL for Marketplace Users
 
 #### Get a list of all your merchants and referral parameters
+
+Sample Query: 
 ```json
 {
     "query": "{ 
@@ -50,6 +52,8 @@ Sample response
 <br />
 
 #### Get a list of your conversions and payment status in May 2018
+
+Sample Query: 
 ```json
 {
     "query": "{ 
@@ -103,6 +107,8 @@ Sample response:
 <br />
 
 #### Get a list of all payments you received in May 2018
+
+Sample Query: 
 ```json
 {
     "query": "{ 

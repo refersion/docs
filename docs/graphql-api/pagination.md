@@ -5,6 +5,8 @@ Refersion GraphQL currently supports offset-based [pagination](http://graphql.or
 Let’s say you’d like to pull a list of all your May 2018 conversions, and there are 200 results in total. In order to get all 200 results, you’d need to make a total of 4 requests (since each request returns a maximum of 50 results) using offsets. 
 
 ### First request:
+
+Sample Query: 
 ```json
 {
     "query": "{ 
@@ -23,6 +25,8 @@ Let’s say you’d like to pull a list of all your May 2018 conversions, and th
 ```
 
 ### Second request:
+
+Sample Query: 
 ```json
 {
     "query": "{ 
@@ -43,6 +47,8 @@ Let’s say you’d like to pull a list of all your May 2018 conversions, and th
 Notice the offset command, which fetches you the next 50 results starting from record #51
 
 ### Third request:
+
+Sample Query: 
 ```json
 {
     "query": "{ 
@@ -63,6 +69,8 @@ Notice the offset command, which fetches you the next 50 results starting from r
 This gets you records #101-150
 
 ### Fourth request:
+
+Sample Query: 
 ```json
 {
     "query": "{ 
