@@ -459,6 +459,7 @@
 <p>Refersion GraphQL currently supports offset-based <a href="http://graphql.org/learn/pagination/">pagination</a>, which let’s you offset the start of each page by the number specified. </p>
 <p>Let’s say you’d like to pull a list of all your May 2018 conversions, and there are 200 results in total. In order to get all 200 results, you’d need to make a total of 4 requests (since each request returns a maximum of 50 results) using offsets. </p>
 <h3 id="first-request">First request:<a class="headerlink" href="#first-request" title="Permanent link">&para;</a></h3>
+<p>Sample Query: </p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{ </span>
 <span class="s2">        conversions (created_from: 1525132800 created_to: 1527202238 first: 50) {</span>
@@ -477,6 +478,7 @@
 
 
 <h3 id="second-request">Second request:<a class="headerlink" href="#second-request" title="Permanent link">&para;</a></h3>
+<p>Sample Query: </p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{ </span>
 <span class="s2">        conversions (created_from: 1525132800 created_to: 1527202238 first: 50, offset: 50) {</span>
@@ -496,6 +498,7 @@
 
 <p>Notice the offset command, which fetches you the next 50 results starting from record #51</p>
 <h3 id="third-request">Third request:<a class="headerlink" href="#third-request" title="Permanent link">&para;</a></h3>
+<p>Sample Query: </p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{ </span>
 <span class="s2">        conversions (created_from: 1525132800 created_to: 1527202238 first: 50, offset: 100) { </span>
@@ -515,6 +518,7 @@
 
 <p>This gets you records #101-150</p>
 <h3 id="fourth-request">Fourth request:<a class="headerlink" href="#fourth-request" title="Permanent link">&para;</a></h3>
+<p>Sample Query: </p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{ </span>
 <span class="s2">        conversions (created_from: 1525132800 first: 50, offset: 150) { </span>
