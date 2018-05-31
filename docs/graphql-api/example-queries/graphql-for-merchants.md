@@ -72,6 +72,7 @@ Sample Query:
 }
 ```
 
+<br />
 
 Sample response:
 ```json
