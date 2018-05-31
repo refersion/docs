@@ -1,5 +1,54 @@
 # GraphQL for Marketplace Users
 
+#### Get a list of all your merchants and referral parameters
+```json
+{
+    "query": "{ 
+        affiliates {
+            shop {
+                name, 
+                url
+            }, 
+            id, 
+            status, 
+            rfsn_parameter
+        } 
+    }"
+}
+```
+
+<br />
+
+Sample response
+```json
+{
+    "data": {
+        "affiliates": [
+            {
+                "shop": {
+                    "name": "refersion-demo",
+                    "url": "http://refersion-demo.refersion.com"
+                },
+                "id": 123456,
+                "status": "ACTIVE",
+                "rfsn_parameter": "&rfsn=1111110.c4845"
+            },
+            {
+                "shop": {
+                    "name": "refersion-test",
+                    "url": "http://refersion-test.refersion.com"
+                },
+                "id": 234578,
+                "status": "ACTIVE",
+                "rfsn_parameter": "&rfsn=111111.1111a"
+            }
+        ]
+    }
+}
+```
+
+<br />
+
 #### Get a list of your conversions and payment status in May 2018
 ```json
 {
