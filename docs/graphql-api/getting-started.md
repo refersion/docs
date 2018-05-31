@@ -41,7 +41,7 @@ curl -X POST \
 
 #### Example Query
 
-Sample Query: 
+Sample query: 
 ```json
 {
 	"query": "{  

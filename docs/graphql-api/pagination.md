@@ -6,7 +6,7 @@ Let’s say you’d like to pull a list of all your May 2018 conversions, and th
 
 ### First request:
 
-Sample Query: 
+Sample query: 
 ```json
 {
     "query": "{ 
@@ -26,7 +26,7 @@ Sample Query:
 
 ### Second request:
 
-Sample Query: 
+Sample query: 
 ```json
 {
     "query": "{ 
@@ -48,7 +48,7 @@ Notice the offset command, which fetches you the next 50 results starting from r
 
 ### Third request:
 
-Sample Query: 
+Sample query: 
 ```json
 {
     "query": "{ 
@@ -70,7 +70,7 @@ This gets you records #101-150
 
 ### Fourth request:
 
-Sample Query: 
+Sample query: 
 ```json
 {
     "query": "{ 

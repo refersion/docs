@@ -2,7 +2,7 @@
 
 #### Get a list of all your merchants and referral parameters
 
-Sample Query: 
+Sample query: 
 ```json
 {
     "query": "{ 
@@ -53,7 +53,7 @@ Sample response
 
 #### Get a list of your conversions and payment status in May 2018
 
-Sample Query: 
+Sample query: 
 ```json
 {
     "query": "{ 
@@ -108,7 +108,7 @@ Sample response:
 
 #### Get a list of all payments you received in May 2018
 
-Sample Query: 
+Sample query: 
 ```json
 {
     "query": "{ 
