@@ -460,7 +460,18 @@
 <p>Let’s say you’d like to pull a list of all your May 2018 conversions, and there are 200 results in total. In order to get all 200 results, you’d need to make a total of 4 requests (since each request returns a maximum of 50 results) using offsets. </p>
 <h3 id="first-request">First request:<a class="headerlink" href="#first-request" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{ conversions (created_from: 1525132800 created_to: 1527202238 first: 50) { affiliate {name, email}, total, commission_total, currency, created} }&quot;</span>
+    <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{ </span>
+<span class="s2">        conversions (created_from: 1525132800 created_to: 1527202238 first: 50) {</span>
+<span class="s2">            affiliate {</span>
+<span class="s2">                name, </span>
+<span class="s2">                email</span>
+<span class="s2">            }, </span>
+<span class="s2">            total, </span>
+<span class="s2">            commission_total, </span>
+<span class="s2">            currency, </span>
+<span class="s2">            created</span>
+<span class="s2">        }</span>
+<span class="s2">    }&quot;</span>
 <span class="p">}</span>
 </pre></div>
 
