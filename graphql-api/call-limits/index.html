@@ -90,7 +90,7 @@
                 Developer Center
               </span>
               <span class="md-header-nav__topic">
-                Overview
+                Call Limits
               </span>
             
           
@@ -190,54 +190,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Overview
-      </label>
-    
-    <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-graphql" title="What is GraphQL?" class="md-nav__link">
-    What is GraphQL?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-resources" title="Additional Resources" class="md-nav__link">
-    Additional Resources
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -269,11 +226,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../call-limits/" title="Call Limits" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="Call Limits" class="md-nav__link md-nav__link--active">
       Call Limits
     </a>
+    
   </li>
 
         
@@ -395,27 +361,6 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-graphql" title="What is GraphQL?" class="md-nav__link">
-    What is GraphQL?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-resources" title="Additional Resources" class="md-nav__link">
-    Additional Resources
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -427,28 +372,9 @@
               
                 
                 
-                <h1 id="graphql-overview">GraphQL Overview<a class="headerlink" href="#graphql-overview" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>This is a Beta API and is subject to change.</p>
-</div>
-<h2 id="what-is-graphql">What is GraphQL?<a class="headerlink" href="#what-is-graphql" title="Permanent link">&para;</a></h2>
-<p>GraphQL is a new way to think about building and querying APIs. Rather than construct several REST requests to pull data that you’re interested in, you can fetch all the information you need in a single call. GraphQL allows you specify exactly which fields you need, making data querying more flexible and efficient than traditional REST APIs. </p>
-<p>Example request and response:</p>
-<div style="text-align: center;">
-<img src="/assets/images/graphql-response-animation.gif" alt="What you request is what you get" />
-</div>
-
-<p>GraphQL is, above all, a querying language, and the format of the query you send matches the data you receive. The language has a schema that strongly ties the exchange between client and server.</p>
-<p>We built GraphQL API to supplement our existing REST API, giving you more flexibility to get exactly the data you need. </p>
-<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
-<p>Below is some optional reading material that might help you go deeper into the GraphQL ecosystem:</p>
-<ul>
-<li><a href="http://facebook.github.io/graphql/">GraphQL Specification</a></li>
-<li><a href="http://graphql.org/learn/">Introduction to GraphQL</a></li>
-<li><a href="https://www.howtographql.com/0">The Fullstack Tutorial for GraphQL</a></li>
-<li><a href="https://github.com/chentsulin/awesome-graphql">List of GraphQL Tools</a></li>
-</ul>
+                <h1 id="call-limits">Call Limits<a class="headerlink" href="#call-limits" title="Permanent link">&para;</a></h1>
+<p>In order to keep our service running a high level of performance, every account has a limit of requests. If you exceed your allotted limits, a 429 Too Many Requests error code will be returned and future requests may be throttled.</p>
+<p>Each request returns a maximum of 50 results, use <a href="../../../graphql-api/pagination/">Pagination</a> to fetch all your results with multiple requests.</p>
                 
                   
                 

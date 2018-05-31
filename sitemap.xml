@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-12-27</lastmod>
+     <lastmod>2018-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,19 +13,37 @@
         
     <url>
      <loc>/graphql-api/overview/</loc>
-     <lastmod>2017-12-27</lastmod>
+     <lastmod>2018-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/graphql-api/getting-started/</loc>
-     <lastmod>2017-12-27</lastmod>
+     <lastmod>2018-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/graphql-api/tutorial/</loc>
-     <lastmod>2017-12-27</lastmod>
+     <loc>/graphql-api/explore-refersion-graphql-using-voyager/</loc>
+     <lastmod>2018-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/graphql-api/call-limits/</loc>
+     <lastmod>2018-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/graphql-api/pagination/</loc>
+     <lastmod>2018-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -35,7 +53,7 @@
         
     <url>
      <loc>/rest-api/overview/</loc>
-     <lastmod>2017-12-27</lastmod>
+     <lastmod>2018-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

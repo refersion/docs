@@ -90,7 +90,7 @@
                 Developer Center
               </span>
               <span class="md-header-nav__topic">
-                Overview
+                Explore Refersion GraphQL using Voyager
               </span>
             
           
@@ -190,54 +190,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Overview
-      </label>
-    
-    <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-graphql" title="What is GraphQL?" class="md-nav__link">
-    What is GraphQL?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-resources" title="Additional Resources" class="md-nav__link">
-    Additional Resources
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -257,11 +214,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../explore-refersion-graphql-using-voyager/" title="Explore Refersion GraphQL using Voyager" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="Explore Refersion GraphQL using Voyager" class="md-nav__link md-nav__link--active">
       Explore Refersion GraphQL using Voyager
     </a>
+    
   </li>
 
         
@@ -395,27 +361,6 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-graphql" title="What is GraphQL?" class="md-nav__link">
-    What is GraphQL?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-resources" title="Additional Resources" class="md-nav__link">
-    Additional Resources
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -427,28 +372,34 @@
               
                 
                 
-                <h1 id="graphql-overview">GraphQL Overview<a class="headerlink" href="#graphql-overview" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>This is a Beta API and is subject to change.</p>
-</div>
-<h2 id="what-is-graphql">What is GraphQL?<a class="headerlink" href="#what-is-graphql" title="Permanent link">&para;</a></h2>
-<p>GraphQL is a new way to think about building and querying APIs. Rather than construct several REST requests to pull data that you’re interested in, you can fetch all the information you need in a single call. GraphQL allows you specify exactly which fields you need, making data querying more flexible and efficient than traditional REST APIs. </p>
-<p>Example request and response:</p>
-<div style="text-align: center;">
-<img src="/assets/images/graphql-response-animation.gif" alt="What you request is what you get" />
-</div>
+                <h1 id="explore-refersion-graphql-using-voyager">Explore Refersion GraphQL using Voyager<a class="headerlink" href="#explore-refersion-graphql-using-voyager" title="Permanent link">&para;</a></h1>
+<p>Voyager is a great tool to visualize Refersion GraphQL. Follow the steps below to explore the full set of data available through the API.</p>
+<ol>
+<li>
+<p>Prepare a POST request:</p>
+<div class="codehilite"><pre><span></span>&quot;https://graphql.refersion.com&quot; \
+-H &quot;X-Refersion-Key: &lt;YOUR_ACCESS_TOKEN&gt;&quot; \
+-H &quot;Content-Type: application/graphql&quot; \
+</pre></div>
 
-<p>GraphQL is, above all, a querying language, and the format of the query you send matches the data you receive. The language has a schema that strongly ties the exchange between client and server.</p>
-<p>We built GraphQL API to supplement our existing REST API, giving you more flexibility to get exactly the data you need. </p>
-<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
-<p>Below is some optional reading material that might help you go deeper into the GraphQL ecosystem:</p>
-<ul>
-<li><a href="http://facebook.github.io/graphql/">GraphQL Specification</a></li>
-<li><a href="http://graphql.org/learn/">Introduction to GraphQL</a></li>
-<li><a href="https://www.howtographql.com/0">The Fullstack Tutorial for GraphQL</a></li>
-<li><a href="https://github.com/chentsulin/awesome-graphql">List of GraphQL Tools</a></li>
-</ul>
+
+</li>
+<li>
+<p>Go to <a href="https://apis.guru/graphql-voyager/">https://apis.guru/graphql-voyager/</a> and click “Custom Schema”</p>
+</li>
+<li>
+<p>Click “Copy Introspection Query” and paste it as the body of your POST request, keep your Voyager window open</p>
+</li>
+<li>
+<p>Send the POST request, copy the response and paste it back in Voyager (see below)</p>
+<p><div style="text-align: center;">
+<img src="/assets/images/voyager.png" alt="What you request is what you get" />
+</div></p>
+</li>
+<li>
+<p>Press "CHANGE SCHEMA" </p>
+</li>
+</ol>
                 
                   
                 
