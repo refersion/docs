@@ -7,7 +7,18 @@ Let’s say you’d like to pull a list of all your May 2018 conversions, and th
 ### First request:
 ```json
 {
-    "query": "{ conversions (created_from: 1525132800 created_to: 1527202238 first: 50) { affiliate {name, email}, total, commission_total, currency, created} }"
+    "query": "{ 
+        conversions (created_from: 1525132800 created_to: 1527202238 first: 50) {
+            affiliate {
+                name, 
+                email
+            }, 
+            total, 
+            commission_total, 
+            currency, 
+            created
+        }
+    }"
 }
 ```
 
