@@ -522,7 +522,7 @@
 <p></b></p>
 <h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
 <p>The GraphQL API requires an access token for making authenticated requests.</p>
-<h5 id="getting-your-access-token">Getting your access token<a class="headerlink" href="#getting-your-access-token" title="Permanent link">&para;</a></h5>
+<h4 id="getting-your-access-token">Getting your access token<a class="headerlink" href="#getting-your-access-token" title="Permanent link">&para;</a></h4>
 <p>Refersion merchants can obtain access token by logging into your Refersion account and navigating to <a href="https://www.refersion.com/base/settings/integrations/api">Account/Settings/Refersion API/GraphQL</a>. </p>
 <p>If you are a <a href="https://marketplace.refersion.com/">Refersion Marketplace</a> user and would like to use GraphQL, please email us at <a href="mailto:helpme@refersion.com">helpme@refersion.com</a> to request access. Once GraphQL has been enabled on your account, the token will be available on your <a href="https://marketplace.refersion.com/profile">Marketplace Profile</a> page.</p>
 <h2 id="making-your-first-query">Making your first query<a class="headerlink" href="#making-your-first-query" title="Permanent link">&para;</a></h2>
@@ -531,13 +531,12 @@
 <p>To make a query using curl, send a POST request with your query as the JSON payload.</p>
 <div class="codehilite"><pre><span></span>curl -X POST <span class="se">\</span>
 <span class="s2">&quot;https://graphql.refersion.com&quot;</span> <span class="se">\</span>
--H <span class="s2">&quot;X-Refersion-Key: &lt;OUR_ACCESS_TOKEN&gt;&quot;</span> <span class="se">\</span>
+-H <span class="s2">&quot;X-Refersion-Key: &lt;YOUR_ACCESS_TOKEN&gt;&quot;</span> <span class="se">\</span>
 -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
 </pre></div>
 
 
 <h4 id="example-query">Example Query<a class="headerlink" href="#example-query" title="Permanent link">&para;</a></h4>
-<p>Sample query: </p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{  </span>
 <span class="s2">        offers { </span>
