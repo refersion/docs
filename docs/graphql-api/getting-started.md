@@ -45,7 +45,6 @@ curl -X POST \
 {
     "query": "{  
         offers { 
-            offer_name, 
             commission, 
             type 
         } 
