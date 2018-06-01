@@ -18,7 +18,7 @@ The GraphQL API requires an access token for making authenticated requests.
 
 
 
-##### Getting your access token 
+#### Getting your access token 
 
 Refersion merchants can obtain access token by logging into your Refersion account and navigating to [Account/Settings/Refersion API/GraphQL](https://www.refersion.com/base/settings/integrations/api). 
 
@@ -34,14 +34,13 @@ To make a query using curl, send a POST request with your query as the JSON payl
 ```bash
 curl -X POST \
 "https://graphql.refersion.com" \
--H "X-Refersion-Key: <OUR_ACCESS_TOKEN>" \
+-H "X-Refersion-Key: <YOUR_ACCESS_TOKEN>" \
 -H "Content-Type: application/json" \
 ```
 
 
 #### Example Query
 
-Sample query: 
 ```json
 {
     "query": "{  
