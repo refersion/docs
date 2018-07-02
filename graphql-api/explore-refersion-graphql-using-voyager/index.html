@@ -377,12 +377,16 @@
 <ol>
 <li>
 <p>Prepare a POST request:</p>
-<div class="codehilite"><pre><span></span>&quot;https://graphql.refersion.com&quot; \
--H &quot;X-Refersion-Key: &lt;YOUR_ACCESS_TOKEN&gt;&quot; \
--H &quot;Content-Type: application/graphql&quot; \
+<div class="codehilite"><pre><span></span>curl -X &quot;POST&quot; \
+&quot;https://graphql.refersion.com/&quot; \
+-H &#39;X-Refersion-Key: &lt;YOUR_ACCESS_TOKEN&gt;&#39; \
+-H &#39;Content-Type: application/graphql&#39; \
 </pre></div>
 
 
+<blockquote>
+<p><strong> <em>Notice the Content-Type, which is application/graphql instead of application/json</em> </strong></p>
+</blockquote>
 </li>
 <li>
 <p>Go to <a href="https://apis.guru/graphql-voyager/">https://apis.guru/graphql-voyager/</a> and click “Custom Schema”</p>
