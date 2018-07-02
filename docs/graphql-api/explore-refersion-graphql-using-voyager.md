@@ -5,11 +5,14 @@ Voyager is a great tool to visualize Refersion GraphQL. Follow the steps below t
  1. Prepare a POST request:
  
         
-        "https://graphql.refersion.com" \
-        -H "X-Refersion-Key: <YOUR_ACCESS_TOKEN>" \
-        -H "Content-Type: application/graphql" \
+        curl -X "POST" \
+        "https://graphql.refersion.com/" \
+        -H 'X-Refersion-Key: <YOUR_ACCESS_TOKEN>' \
+        -H 'Content-Type: application/graphql' \
         
- 
+    
+    > ** _Notice the Content-Type, which is application/graphql instead of application/json_ **
+
  2. Go to [https://apis.guru/graphql-voyager/](https://apis.guru/graphql-voyager/) and click “Custom Schema”
 
  3. Click “Copy Introspection Query” and paste it as the body of your POST request, keep your Voyager window open
