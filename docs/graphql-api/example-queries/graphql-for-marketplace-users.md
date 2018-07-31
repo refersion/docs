@@ -9,7 +9,8 @@ Sample query:
         affiliates {
             shop {
                 name, 
-                url
+                url,
+                shop_identifier
             }, 
             id, 
             status, 
@@ -29,7 +30,8 @@ Sample response
             {
                 "shop": {
                     "name": "refersion-demo",
-                    "url": "http://refersion-demo.refersion.com"
+                    "url": "http://refersion-demo.refersion.com",
+                    "shop_identifier": "12345678"
                 },
                 "id": 123456,
                 "status": "ACTIVE",
@@ -38,7 +40,8 @@ Sample response
             {
                 "shop": {
                     "name": "refersion-test",
-                    "url": "http://refersion-test.refersion.com"
+                    "url": "http://refersion-test.refersion.com",
+                    "shop_identifier": "98765432"
                 },
                 "id": 234578,
                 "status": "ACTIVE",
