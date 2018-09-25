@@ -28,7 +28,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.2.5">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.2.5">
     
      
     
@@ -294,6 +294,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#total-pagination-results" title="Total Pagination Results" class="md-nav__link">
+    Total Pagination Results
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -440,6 +447,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#total-pagination-results" title="Total Pagination Results" class="md-nav__link">
+    Total Pagination Results
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -457,12 +471,12 @@
                 
                 <h1 id="pagination">Pagination<a class="headerlink" href="#pagination" title="Permanent link">&para;</a></h1>
 <p>Refersion GraphQL currently supports offset-based <a href="http://graphql.org/learn/pagination/">pagination</a>, which let’s you offset the start of each page by the number specified. </p>
-<p>Let’s say you’d like to pull a list of all your May 2018 conversions, and there are 200 results in total. In order to get all 200 results, you’d need to make a total of 4 requests (since each request returns a maximum of 50 results) using offsets. </p>
+<p>Let’s say you’d like to pull a list of all your May 2018 conversions, and there are 800 results in total. In order to get all 800 results, you’d need to make a total of 4 requests (since each request returns a maximum of 200 results) using offsets. </p>
 <h3 id="first-request">First request:<a class="headerlink" href="#first-request" title="Permanent link">&para;</a></h3>
 <p>Sample query: </p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{ </span>
-<span class="s2">        conversions (created_from: 1525132800 created_to: 1527202238 first: 50) {</span>
+<span class="s2">        conversions (created_from: 1525132800 created_to: 1527202238 first: 200) {</span>
 <span class="s2">            affiliate {</span>
 <span class="s2">                name, </span>
 <span class="s2">                email</span>
@@ -481,7 +495,7 @@
 <p>Sample query: </p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{ </span>
-<span class="s2">        conversions (created_from: 1525132800 created_to: 1527202238 first: 50, offset: 50) {</span>
+<span class="s2">        conversions (created_from: 1525132800 created_to: 1527202238 first: 200, offset: 200) {</span>
 <span class="s2">            affiliate {</span>
 <span class="s2">                name, </span>
 <span class="s2">                email</span>
@@ -496,12 +510,12 @@
 </pre></div>
 
 
-<p>Notice the offset command, which fetches you the next 50 results starting from record #51</p>
+<p>Notice the offset command, which fetches you the next 200 results starting from record #201</p>
 <h3 id="third-request">Third request:<a class="headerlink" href="#third-request" title="Permanent link">&para;</a></h3>
 <p>Sample query: </p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{ </span>
-<span class="s2">        conversions (created_from: 1525132800 created_to: 1527202238 first: 50, offset: 100) { </span>
+<span class="s2">        conversions (created_from: 1525132800 created_to: 1527202238 first: 200, offset: 400) { </span>
 <span class="s2">            affiliate {</span>
 <span class="s2">                name, </span>
 <span class="s2">                email</span>
@@ -516,12 +530,12 @@
 </pre></div>
 
 
-<p>This gets you records #101-150</p>
+<p>This gets you records #401-600</p>
 <h3 id="fourth-request">Fourth request:<a class="headerlink" href="#fourth-request" title="Permanent link">&para;</a></h3>
 <p>Sample query: </p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{ </span>
-<span class="s2">        conversions (created_from: 1525132800 first: 50, offset: 150) { </span>
+<span class="s2">        conversions (created_from: 1525132800 first: 200, offset: 600) { </span>
 <span class="s2">            affiliate {</span>
 <span class="s2">                name, </span>
 <span class="s2">                email</span>
@@ -536,8 +550,57 @@
 </pre></div>
 
 
-<p>This gets you records #151-200</p>
+<p>This gets you records #601-800</p>
 <p>Repeat the above for larger number of results until you get all the data returned. </p>
+<h3 id="total-pagination-results">Total Pagination Results<a class="headerlink" href="#total-pagination-results" title="Permanent link">&para;</a></h3>
+<p>It is possible to select the total number of results that can be retrieved using a GraphQL query by adding a <code>pageInfo</code> section to your request.  This can be helpful for determining when you have requested all possible pages for a query.</p>
+<p>Sample query: </p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;{ </span>
+<span class="s2">        conversions (created_from: 1525132800 first: 200, offset: 600) { </span>
+<span class="s2">            affiliate {</span>
+<span class="s2">                name, </span>
+<span class="s2">                email</span>
+<span class="s2">            }, </span>
+<span class="s2">            total, </span>
+<span class="s2">            commission_total, </span>
+<span class="s2">            currency, </span>
+<span class="s2">            created</span>
+<span class="s2">        },</span>
+<span class="s2">        pageInfo {</span>
+<span class="s2">            total_results {</span>
+<span class="s2">                conversions</span>
+<span class="s2">            }</span>
+<span class="s2">        }</span>
+<span class="s2">    }&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Sample response:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;conversions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;affiliate&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ABC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;abc@refersion.com&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="s2">&quot;24.00&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;commission_total&quot;</span><span class="p">:</span> <span class="s2">&quot;4.80&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;1526674258&quot;</span>
+            <span class="p">},</span>
+            <span class="err">...</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;pageInfo&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;total_results&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;conversions&quot;</span><span class="p">:</span> <span class="mi">800</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 
@@ -559,7 +622,7 @@
     
       <script src="../../assets/javascripts/application.5165553b.js"></script>
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
       
     
     

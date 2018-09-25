@@ -1,48 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
     <url>
      <loc>/</loc>
-     <lastmod>2018-07-31</lastmod>
+     <lastmod>2018-09-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
+        
     <url>
      <loc>/graphql-api/overview/</loc>
-     <lastmod>2018-07-31</lastmod>
+     <lastmod>2018-09-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     <url>
      <loc>/graphql-api/getting-started/</loc>
-     <lastmod>2018-07-31</lastmod>
+     <lastmod>2018-09-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     <url>
      <loc>/graphql-api/explore-refersion-graphql-using-voyager/</loc>
-     <lastmod>2018-07-31</lastmod>
+     <lastmod>2018-09-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     <url>
      <loc>/graphql-api/call-limits/</loc>
-     <lastmod>2018-07-31</lastmod>
+     <lastmod>2018-09-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     <url>
      <loc>/graphql-api/pagination/</loc>
-     <lastmod>2018-07-31</lastmod>
+     <lastmod>2018-09-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     <url>
-     <loc>/graphql-api/example-queries/graphql-for-merchants/</loc>
-     <lastmod>2018-07-31</lastmod>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
-    <url>
-     <loc>/graphql-api/example-queries/graphql-for-marketplace-users/</loc>
-     <lastmod>2018-07-31</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
+        
+    
+
+    
+        
     <url>
      <loc>/rest-api/overview/</loc>
-     <lastmod>2018-07-31</lastmod>
+     <lastmod>2018-09-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    
+
 </urlset>
