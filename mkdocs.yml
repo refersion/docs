@@ -26,6 +26,11 @@ markdown_extensions:
       permalink: true
 pages:
   - Home: index.md
+  - Refersion Tracking:
+      - Getting started: 'https://refersion.com/tracking#getting-started'
+      - Javascript Tracking: 'https://refersion.com/tracking#option-1'
+      - Webhook Tracking: 'https://refersion.com/tracking#option-2'
+      - Variable descriptions: 'https://refersion.com/tracking#variable-descriptions'
   - GraphQL API: 
       - Overview: graphql-api/overview.md
       - Getting Started: graphql-api/getting-started.md
