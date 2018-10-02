@@ -96,3 +96,38 @@ Sample response:
 }
 ```
 
+<br />
+
+#### Get a list of creatives
+
+Sample query: 
+```json
+{
+    "query": "{ 
+        creatives {
+            category_id, 
+            category_name 
+        }
+    }"
+}
+```
+
+<br />
+
+Sample response:
+```json
+{
+    "data": {
+        "creatives": [
+            {
+                "category_id": "1",
+                "category_name": "Books",
+            },
+            {
+                "category_id": "2",
+                "category_name": "Movies",
+            }
+        ]
+    }
+}
+```
